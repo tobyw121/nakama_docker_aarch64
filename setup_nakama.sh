@@ -109,12 +109,15 @@ EOF
 mkdir -p config
 cat << EOF > config/nakama.yml
 database:
-  address: "root@cockroachdb:26257"
+  address: 
+    - "root@cockroachdb:26257"
 EOF
+
 
 echo "Dockerfile, docker-compose-cockroachdb.yml und config/nakama.yml wurden erstellt."
 
 # Baue das Image und starte die Container
 docker-compose -f docker-compose-cockroachdb.yml up -d
 
-echo "Nakama wird im Docker auf aarch64 ausgeführt."
+echo "Nakama wird im Docker auf aarch64 ausgefÃ¼hrt."
+docker-compose -f docker-compose-cockroachdb.yml up -d
