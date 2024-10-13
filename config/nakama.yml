@@ -1,0 +1,3 @@
+database:
+  address: 
+    - "root@cockroachdb:26257"
